@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/lucafranzoni/primapipeline/_apis/build/status/lucafranzoni.mslearn-tailspin-spacegame-web?branchName=master)](https://dev.azure.com/lucafranzoni/primapipeline/_build/latest?definitionId=1&branchName=master)
+
 modified 2
 # Contributing
 
@@ -29,3 +31,5 @@ Privacy information can be found at https://privacy.microsoft.com/en-us/
 
 Microsoft and any contributors reserve all other rights, whether under their respective copyrights, patents,
 or trademarks, whether by implication, estoppel or otherwise.
+
+[![Build Status](https://dev.azure.com/lucafranzoni/primapipeline/_apis/build/status/lucafranzoni.mslearn-tailspin-spacegame-web?branchName=master)](https://dev.azure.com/lucafranzoni/primapipeline/_build/latest?definitionId=1&branchName=master)
