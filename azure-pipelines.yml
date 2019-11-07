@@ -53,6 +53,25 @@ steps:
     projects: '**/*.Tests.csproj'
     arguments: '--configuration Release --no-build'
 
+- task: DotNetCoreCLI@2
+  displayName: 'Pack the project - $(buildConfiguration)'
+  inputs:
+    command: 'pack'
+    projects: '**/*.csproj'
+    arguments: '--no-build --configuration $(buildConfiguration)'
+    versioningScheme: byPrereleaseNumber
+    majorVersion: '1'
+    minorVersion: '0'
+    patchVersion: '0'
+ 
+- task: NuGetCommand@2
+  displayName: 'Publish NuGet package'
+  inputs:
+    command: push
+    publishVstsFeed: 'Tailspin.SpaceGame.Web'
+    allowPackageConflicts: true
+  condition: succeeded()
+  
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
   condition: succeeded()
